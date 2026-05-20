@@ -10,7 +10,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
   if (!user) return <Navigate to="/login" replace />;
   return (
     <div className={styles.app}>
-      <div className={styles.shell}>
+      <div className="shell" style={{ minHeight: '100vh' }}>
         <Sidebar />
         <main className={styles.main}>{children}</main>
       </div>
