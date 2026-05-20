@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "find . -name '*.tsx' -not -path '*/node_modules/*' | xargs sed -i 's|from \"\\.\\.\/|from \"\\./|g' 2>/dev/null; vite build",
     "preview": "vite preview"
   },
   "dependencies": {
